@@ -4,42 +4,63 @@ import { Check } from 'lucide-react';
 
 const projects = [
     {
-        title: "Cloud Drive",
-        description: "A comprehensive cloud storage platform designed for modern teams, featuring real-time synchronization, granular sharing controls, and blazing-fast upload capabilities with enterprise-grade security and intuitive file management.",
+        title: "High Concurrency Ticketing System",
+        description: "A full-stack, distributed platform architected for extreme concurrency, leveraging PostgreSQL's strict isolation levels to guarantee atomic seat booking and payment processing under massive traffic spikes.",
         features: [
-            "Advanced search functionality with intelligent filters and instant file retrieval across all stored content",
-            "Collaborative folder system with granular role-based permissions and real-time access control management",
-            "Optimized upload system with resumable chunks, progress tracking, and bandwidth optimization features",
-            "Real-time synchronization engine that keeps files updated across all devices and platforms seamlessly",
-            "Enterprise-grade security implementation with end-to-end encryption and comprehensive audit logging"
+            "Implemented SERIALIZABLE isolation and aggressive SELECT FOR UPDATE (Row-Level Locking) queries to strictly prevent double-booking and overselling.",
+            "Designed robust automated transaction retry mechanisms to instantly resolve serialization failures and database deadlocks without user intervention.",
+            "Devised a highly dynamic React interface featuring interactive stadium seat maps with real-time availability polling.",
+            "Engineered an ACID-compliant checkout flow ensuring absolute data integrity between external payment gateways and inventory databases.",
+            "Optimized connection pooling and complex query indexing to securely sustain thousands of concurrent booking attempts with minimal latency."
         ],
-        tech: ["NextJS", "TypeScript", "MongoDB", "AWS S3", "AWS CloudFront"],
+        tech: [
+            { name: "Node.js", icon: "nodedotjs" },
+            { name: "Express.js", icon: "express" },
+            { name: "PostgreSQL", icon: "postgresql" },
+            { name: "React", icon: "react" },
+            { name: "Tailwind CSS", icon: "tailwindcss" }
+        ],
+        image: "/event-image.png",
         color: "bg-[#8bb4f6]"
     },
     {
-        title: "FinTech Hub",
-        description: "Real-time financial analytics dashboard visualizing complex market data with sub-second latency.",
+        title: "Memory Mgt. Simulator",
+        description: "A robust, console-based simulation engine engineered in C++ to deeply model core Operating System memory operations, focusing on dynamic allocation, address mapping, and defragmentation.",
         features: [
-            "Live WebSocket market data streaming connecting to multiple global exchanges",
-            "Interactive WebGL charting capabilities with advanced technical indicators",
-            "Automated portfolio rebalancing alerts powered by AI pricing models",
-            "Multi-currency support with dynamic live-conversion modules",
-            "Bank-level encryption protocols safeguarding user trading credentials"
+            "Assembled a robust object-oriented C++ simulation engine to comprehensively model dynamic memory allocation and deallocation lifecycles.",
+            "Integrated LRU (Least Recently Used) and FIFO page replacement policies using advanced STL Maps and Queues.",
+            "Architected an automatic defragmentation algorithm that intelligently shifts active process blocks to actively eliminate external fragmentation.",
+            "Maximized contiguous memory availability to successfully handle highly fragmented and constrained system process environments.",
+            "Demonstrated bare-metal resource management proficiency and a deep understanding of kernel-level operating system architectures."
         ],
-        tech: ["React", "Node.js", "PostgreSQL", "Socket.IO", "Redis"],
+        tech: [
+            { name: "C++", icon: "cplusplus" },
+            { name: "STL Containers", icon: null },
+            { name: "OOP", icon: null },
+            { name: "OS Architecture", icon: null }
+        ],
+        image: "/memory-image.png",
         color: "bg-[#f5a3a3]"
     },
     {
-        title: "AI Image Studio",
-        description: "A powerful generative AI tool that turns text prompts into stunning high-resolution assets instantly.",
+        title: "Crowd Problem Register",
+        description: "A comprehensive full-stack geographic complaint management structured around secure role-based dashboards and dual-authentication workflows.",
         features: [
-            "Stable Diffusion API integration for lightning-fast image synthesis",
-            "Custom LoRA model training interface for specialized aesthetic requests",
-            "Bulk generation queue management designed for enterprise marketing teams",
-            "Auto-upscaler pushing resolutions up to 4K natively in the browser",
-            "Seamless cloud asset export straight to your connected drive"
+            "Engineered robust JWT and Google OAuth authentication flows strictly mapped to Role-Based Access Control (RBAC) privileges.",
+            "Built a real-time, low-latency complaint resolution chat interface powered by bi-directional Socket.io web sockets.",
+            "Integrated complex geospatial complaint mapping using Leaflet to visually cluster and track regional issues across interactive maps.",
+            "Applied a highly secure multimedia upload pipeline utilizing Multer middleware directly linked to Cloudinary's edge CDN.",
+            "Constructed interactive, data-driven analytics dashboards to visualize platform engagement and geographical complaint densities."
         ],
-        tech: ["Python", "FastAPI", "React", "PyTorch", "GCP"],
+        tech: [
+            { name: "MongoDB", icon: "mongodb" },
+            { name: "Express.js", icon: "express" },
+            { name: "React", icon: "react" },
+            { name: "Node.js", icon: "nodedotjs" },
+            { name: "Tailwind CSS", icon: "tailwindcss" },
+            { name: "Socket.io", icon: "socketdotio" }
+        ],
+        image: "/crowd-image.png",
         color: "bg-[#b1ecc0]"
     }
 ];
@@ -80,13 +101,8 @@ export default function FeaturedProjects() {
                                     {/* Camera dot */}
                                     <div className="absolute top-1.5 w-1.5 h-1.5 rounded-full bg-[#333]" />
                                     {/* Screen Content */}
-                                    <div className="w-full h-full flex items-center justify-center bg-[#070707] border border-white/5 rounded-sm relative">
-                                        <div className="text-center">
-                                            <div className="w-14 h-14 bg-[#1a1a1a] rounded-lg mx-auto mb-3 border border-white/5 flex items-center justify-center">
-                                                <div className="w-5 h-5 bg-blue-500 rounded-full blur-[6px] opacity-60" />
-                                            </div>
-                                            <span className="text-white/30 text-[9px] font-medium tracking-wide uppercase">App Interface</span>
-                                        </div>
+                                    <div className="w-full h-full flex items-center justify-center bg-[#070707] border border-white/5 rounded-sm relative overflow-hidden group/screen">
+                                        <img src={project.image} alt={project.title} className="w-full h-full object-cover object-top opacity-90 group-hover/screen:opacity-100 transition-opacity duration-500" />
                                     </div>
                                 </div>
                                 {/* Laptop Base Lip */}
@@ -121,13 +137,19 @@ export default function FeaturedProjects() {
                                 ))}
                             </ul>
 
-                            <div className="flex flex-wrap gap-2.5 mt-auto">
+                            <div className="flex flex-wrap gap-3 mt-auto">
                                 {project.tech.map((t) => (
-                                    <span key={t} className="px-3.5 py-1.5 rounded-full text-[12px] font-medium bg-[#1e1e1e] border border-white/5 text-[#d1d1d1] flex items-center gap-2">
-                                        <div className="w-3.5 h-3.5 rounded-full bg-gradient-to-br from-[#444] to-[#222] font-bold text-[7px] flex justify-center items-center text-white border border-white/10 uppercase">
-                                            {t[0]}
-                                        </div>
-                                        {t}
+                                    <span key={t.name} className="flex flex-row items-center gap-2.5 px-3 py-1.5 rounded-[10px] bg-[#161616] border border-[#333333] text-[#fafafa] text-[14px] font-medium cursor-default transition-colors hover:border-[#555]">
+                                        {t.icon ? (
+                                            <div className="w-[16px] h-[16px] flex items-center justify-center">
+                                                <img src={`https://cdn.simpleicons.org/${t.icon}`} alt={`${t.name} logo`} className="w-full h-full object-contain" />
+                                            </div>
+                                        ) : (
+                                            <div className="w-[16px] h-[16px] rounded-full bg-gradient-to-br from-[#444] to-[#222] font-bold text-[8px] flex justify-center items-center text-white border border-[#333] uppercase">
+                                                {t.name[0]}
+                                            </div>
+                                        )}
+                                        <span className="tracking-wide text-[13px]">{t.name}</span>
                                     </span>
                                 ))}
                             </div>

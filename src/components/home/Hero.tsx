@@ -4,7 +4,7 @@ import { Zap, Eye, Layers, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Hero() {
-    const techStack = ["TypeScript", "React", "Next.js", "Node.js", "Python", "Ai", "GraphQL", "PostgreSQL", "AWS"];
+    const techStack = ["Agile", "React", "Next.js", "Node.js", "C++", "Cloud", "MERN Stack", "PostgreSQL"];
 
     const traits = [
         { name: "Performance-first", icon: <Zap size={13} className="text-[#a1a1aa]" /> },
@@ -34,8 +34,8 @@ export default function Hero() {
                 transition={{ delay: 0.2 }}
                 className="text-[#a1a1aa] mb-5 text-[15px] md:text-[16px] font-medium leading-[1.6] max-w-2xl px-2"
             >
-                <p className="mb-0.5">Hey there! I&apos;m Zeeshan Arif Ahmad 👋 a Software Engineer</p>
-                <p className="mb-0.5">Engineering high-performance, accessible, and scalable products</p>
+                <p className="mb-0.5">Hey there! I&apos;m Zeeshan Arif Ahmad 👋 an aspiring Software Engineer</p>
+                <p className="mb-0.5">Passionate about engineering high-performance, accessible, and scalable products</p>
                 <p>for web and mobile.</p>
             </motion.div>
 

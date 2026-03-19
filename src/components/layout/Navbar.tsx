@@ -7,9 +7,8 @@ import { motion } from 'framer-motion';
 const links = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
-    { name: 'Projects', href: '/projects' },
-    { name: 'Hire Me', href: '/hire-me' },
-    { name: 'Snippets', href: '/snippets' },
+    { name: 'Projects', href: '/#projects' },
+    { name: 'Achievements', href: '/achievements' },
 ];
 
 export default function Navbar() {

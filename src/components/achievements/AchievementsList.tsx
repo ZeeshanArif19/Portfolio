@@ -4,23 +4,23 @@ import { Trophy } from 'lucide-react';
 
 const achievements = [
     {
-        title: "1st Place - Global Hackathon 2025",
-        category: "Innovation",
-        date: "December 2025",
-        description: "Led a team of 4 to build an AI-powered accessibility tool. Over 5,000 international participants competed. Our solution was praised for its robust architecture and immediate real-world applicability."
-    },
-    {
-        title: "Open Source Contributor of the Year",
-        category: "Community",
-        date: "January 2025",
-        description: "Recognized for significant core contributions to major Next.js open-source libraries, improving hydration performance by 14% and resolving over 50 outstanding accessibility issues."
-    },
-    {
-        title: "Top 1% on LeetCode",
+        title: "Solved 600+ DSA Problems",
         category: "Problem Solving",
-        date: "Ongoing",
-        description: "Consistently ranked in the top 1% globally on coding platforms, demonstrating extreme proficiency in dynamic programming, graph theory, and system design optimizations under tight constraints."
-    }
+        date: "Mar 2026",
+        description: "Solved 600+ problems across various platforms including LeetCode, GeeksforGeeks, and HackerRank, covering a wide range of topics from basic data structures to advanced algorithms and dynamic programming."
+    },
+    {
+        title: "Competitive Programming",
+        category: "Competition",
+        date: "Feb 2026",
+        description: "Earned 2 stars on CodeChef and 1534 rating on LeetCode, demonstrating competitive coding proficiency."
+    },
+    // {
+    //     title: "Top 1% on LeetCode",
+    //     category: "Problem Solving",
+    //     date: "Ongoing",
+    //     description: "Consistently ranked in the top 1% globally on coding platforms, demonstrating extreme proficiency in dynamic programming, graph theory, and system design optimizations under tight constraints."
+    // }
 ];
 
 export default function AchievementsList() {

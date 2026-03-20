@@ -25,7 +25,7 @@ export default function AboutMeCta() {
 
                     <div className="text-[#a1a1aa] text-[15px] leading-[1.8] flex flex-col gap-6 font-medium">
                         <p>
-                            <strong className="text-white font-bold tracking-wide">I&apos;m Zeeshan Arif Ahmad</strong> — a driven Software Engineer with a passion for building engaging and efficient web applications. Whether it&apos;s crafting responsive frontend or architecting robust backends, my toolkit is rooted in the JavaScript ecosystem and Python. I have strong experience in React, Next.js, and Node.js. I&apos;m always curious to learn more.
+                            <strong className="text-white font-bold tracking-wide">I&apos;m Zeeshan Arif Ahmad</strong> — an aspiring Software Engineer with a passion for building engaging and efficient web applications. Whether it&apos;s crafting responsive frontend or architecting robust backends, my toolkit is rooted in the JavaScript ecosystem and Python. I have strong experience in React, Next.js, and Node.js. I&apos;m always curious to learn more.
                         </p>
                         <p>
                             When I&apos;m not deep in code, I love to explore new ideas and fulfill my curiosity. I believe in balance and enjoy embracing every aspect of life.
@@ -74,13 +74,13 @@ export default function AboutMeCta() {
                     If you have an opportunity or a project in mind, feel free to reach out. I&apos;m always open to discussing new ideas, collaborations, or potential opportunities to contribute my skills and expertise.
                 </p>
 
-                <Link
-                    href="/contact"
+                <a
+                    href="mailto:arifzeeshan659@gmail.com"
                     className="px-10 py-4 bg-white text-black font-semibold rounded-full hover:scale-105 transition-transform flex items-center justify-center gap-2 group text-[15px]"
                 >
                     Get In Touch
                     <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                </Link>
+                </a>
             </motion.div> */}
         </section>
     );

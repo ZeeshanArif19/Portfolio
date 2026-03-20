@@ -4,21 +4,24 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 
 const educationData = [
     {
-        year: '2022 - 2026',
-        degree: 'Bachelor of Technology in Computer Science',
-        institution: 'Leading Tech University',
+        year: '2023 - 2027',
+        degree: 'Bachelor of Technology in Computer Science and engineering',
+        CGPA: '8.6',
+        institution: 'Lovely Professional University',
         description: 'Focused on Data Structures, Algorithms, Full-Stack Web Development, and Cloud Architecture. Consistently ranked in the top percentile, actively participating in advanced hackathons and research initiatives.'
     },
     {
-        year: '2020 - 2022',
-        degree: 'Higher Secondary Education (Science)',
-        institution: 'National Science Academy',
+        year: '2021 - 2022',
+        degree: 'Intermediate',
+        institution: 'The Assembly of God Church School',
+        Percentage: '83.8',
         description: 'Majored in Physics, Chemistry, and Mathematics with an intense focus on computational logic. Graduated with honors and highest distinction across all technical electives.'
     },
     {
         year: '2019 - 2020',
-        degree: 'Secondary Education',
-        institution: 'Global Heritage High School',
+        degree: 'Matriculation',
+        institution: 'The Assembly of God Church School',
+        Percentage: '80.8',
         description: 'Built a strong foundation in core subjects. Developed an early passion for technology by leading the local computer club and participating in national coding olympiads.'
     }
 ];
@@ -83,7 +86,16 @@ export default function EducationTimeline() {
                                     {item.year}
                                 </span>
                                 <h3 className="text-2xl font-bold text-white mb-2 tracking-tight leading-snug">{item.degree}</h3>
-                                <h4 className="text-[16px] text-[#00dfd8] mb-5 font-medium">{item.institution}</h4>
+                                <h4 className="text-[16px] text-[#00dfd8] mb-3 font-medium">{item.institution}</h4>
+                                
+                                {(item.CGPA || item.Percentage) && (
+                                    <div className="mb-5 inline-flex items-center px-3 py-1 rounded-md bg-white/5 border border-white/10 w-max">
+                                        <span className="text-[12px] font-bold text-white tracking-wide">
+                                            {item.CGPA ? `CGPA: ${item.CGPA}` : `Score: ${item.Percentage}%`}
+                                        </span>
+                                    </div>
+                                )}
+
                                 <p className="text-[#888] leading-[1.8] text-[15px]">
                                     {item.description}
                                 </p>

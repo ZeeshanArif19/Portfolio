@@ -27,8 +27,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${outfit.variable} ${playfair.variable} h-full antialiased dark scroll-smooth`}>
-      <body className="min-h-full flex flex-col relative overflow-x-hidden text-white bg-black">
+    <html lang="en" className={`${outfit.variable} ${playfair.variable} antialiased dark scroll-smooth`}>
+      <body className="flex flex-col relative overflow-x-clip text-white bg-black">
         <SmoothScroll>
           {/* Subtle Neon Ambient Lighting */}
           <div className="fixed top-[-5%] right-[-5%] w-[30vw] h-[30vw] max-w-[400px] max-h-[400px] rounded-full bg-[#8b5cf6]/20 blur-[120px] pointer-events-none -z-10" />

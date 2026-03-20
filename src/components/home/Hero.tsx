@@ -81,13 +81,13 @@ export default function Hero() {
                 >
                     About Me
                 </Link>
-                <Link
-                    href="/contact"
+                <a
+                    href="mailto:arifzeeshan659@gmail.com"
                     className="px-8 py-3 bg-transparent border border-white/20 text-white font-semibold rounded-full hover:bg-white/5 transition-colors flex items-center justify-center gap-2 group text-[14px] min-w-[140px]"
                 >
                     Get In Touch
                     <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
-                </Link>
+                </a>
             </motion.div>
         </section>
     );

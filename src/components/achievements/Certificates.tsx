@@ -1,28 +1,40 @@
 'use client';
 import { motion } from 'framer-motion';
 import { Award, ExternalLink } from 'lucide-react';
+import Image from 'next/image';
 
 const certificates = [
     {
-        title: 'AWS Certified Solutions Architect',
-        issuer: 'Amazon Web Services',
+        title: 'Cloud Computing',
+        issuer: 'IIT Kharagpur',
         date: 'Oct 2025',
-        description: 'Demonstrated advanced proficiency in designing distributed systems and deploying robust cloud architecture on AWS.',
-        link: '#'
+        description: 'Studied foundational and advanced cloud architectures, covering virtualization, distributed computing, resource management, and core service models (IaaS, PaaS, SaaS).',
+        link: '',
+        image:'/images/cloud-cert.jpg'
     },
     {
-        title: 'Meta Front-End Developer',
-        issuer: 'Meta / Coursera',
-        date: 'Aug 2024',
-        description: 'Comprehensive certification covering advanced React, UI/UX design principles, and modern frontend architecture methodologies.',
-        link: '#'
+        title: 'MERN Stack development with GenAI',
+        issuer: 'W3Grads',
+        date: 'Aug 2025',
+        description: 'Built full-stack web applications using MongoDB, Express.js, React, and Node.js, while integrating Generative AI APIs to create smart, scalable, and dynamic web solutions.',
+        link: '#',
+        image:'/images/mern.jpeg'
     },
     {
-        title: 'TypeScript Deep Dive',
-        issuer: 'Frontend Masters',
-        date: 'May 2024',
-        description: 'Mastered advanced generic typings, utility types, and enterprise-scale robust engineering TypeScript patterns.',
-        link: '#'
+        title: 'Computer Communication',
+        issuer: 'University of Colorado (Coursera)',
+        date: 'Nov 2024',
+        description: 'Explored core networking principles, gaining an in-depth understanding of the OSI model, TCP/IP protocols, packet switching, routing, and reliable data transmission.',
+        link: '#',
+        image:'/images/compnet.png'
+    },
+    {
+        title: 'Introduction to Hardware and Operating Systems',
+        issuer: 'IBM (Coursera)',
+        date: 'Sep 2024',
+        description: 'Acquired foundational knowledge of computer hardware architectures, peripheral devices, and core operating system functions including process, memory, and file management.',
+        link: '#',
+        image:'/images/os.png'
     }
 ];
 
@@ -58,8 +70,22 @@ export default function Certificates() {
                     >
                         {/* Visual Header */}
                         <div className="h-44 bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] relative flex items-center justify-center border-b border-white/5 overflow-hidden">
-                            <div className="absolute inset-0 bg-[#00dfd8]/5 group-hover:bg-[#00dfd8]/10 transition-colors duration-500" />
-                            <Award size={56} className="text-[#333] group-hover:text-[#00dfd8] group-hover:scale-110 transition-all duration-500 relative z-10" strokeWidth={1} />
+                            {cert.image ? (
+                                <>
+                                    <div className="absolute inset-0 bg-[#00dfd8]/10 group-hover:bg-transparent transition-colors duration-500 z-10 pointer-events-none" />
+                                    <Image 
+                                        src={cert.image} 
+                                        alt={cert.title} 
+                                        fill
+                                        className="object-cover group-hover:scale-110 transition-all duration-500"
+                                    />
+                                </>
+                            ) : (
+                                <>
+                                    <div className="absolute inset-0 bg-[#00dfd8]/5 group-hover:bg-[#00dfd8]/10 transition-colors duration-500" />
+                                    <Award size={56} className="text-[#333] group-hover:text-[#00dfd8] group-hover:scale-110 transition-all duration-500 relative z-10" strokeWidth={1} />
+                                </>
+                            )}
                         </div>
                         
                         <div className="p-8 flex flex-col flex-grow">

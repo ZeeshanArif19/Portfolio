@@ -21,7 +21,7 @@ export default function Footer() {
                     </div>
                     
                     <a 
-                        href="mailto:hello@zeeshanarif.com" 
+                        href="mailto:arifzeeshan659@gmail.com" 
                         className="group flex flex-col items-start gap-4 p-8 rounded-[24px] bg-[#111] border border-white/5 hover:border-white/20 transition-all duration-300"
                     >
                         <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center group-hover:scale-110 group-hover:bg-white text-white group-hover:text-black transition-all duration-300">
@@ -30,7 +30,7 @@ export default function Footer() {
                         <div>
                             <p className="text-[#a1a1aa] text-sm font-medium mb-1">Get in touch</p>
                             <span className="text-xl font-bold text-white tracking-tight flex items-center gap-2">
-                                hello@zeeshanarif.com
+                                arifzeeshan659@gmail.com
                                 <ArrowUpRight size={18} className="text-[#a1a1aa] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                             </span>
                         </div>

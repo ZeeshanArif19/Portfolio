@@ -4,19 +4,19 @@ import { motion } from 'framer-motion';
 const skills = [
     { name: 'React', icon: 'react' },
     { name: 'Node.js', icon: 'nodedotjs' },
-    { name: 'Express.js', icon: 'express' },
+    { name: 'Express.js', icon: 'express/white' },
     { name: 'MongoDB', icon: 'mongodb' },
     { name: 'PostgreSQL', icon: 'postgresql' },
-    { name: 'Socket.io', icon: 'socketdotio' },
+    { name: 'Socket.io', icon: 'socketdotio/white' },
     { name: 'Tailwind CSS', icon: 'tailwindcss' },
     { name: 'C++', icon: 'cplusplus' },
-    { name: 'Java', icon: 'java' },
+    { name: 'Java', localImage: '/images/java.png' },
     { name: 'JavaScript', icon: 'javascript' },
-    { name: 'GitHub', icon: 'github' },
+    { name: 'GitHub', icon: 'github/white' },
     { name: 'Git', icon: 'git' },
-    { name: 'VS Code', icon: 'visualstudiocode' },
+    { name: 'VS Code', localImage: '/images/visual-studio.png' },
     { name: 'Postman', icon: 'postman' },
-    { name: 'Vercel', icon: 'vercel' },
+    { name: 'Vercel', icon: 'vercel/white' },
     { name: 'Linux', icon: 'linux' },
     { name: 'JIRA', icon: 'jira' },
     { name: 'Docker', icon: 'docker' }
@@ -50,7 +50,11 @@ export default function Competencies() {
                         className="flex flex-row items-center gap-3 px-4 py-2.5 rounded-[10px] bg-[#161616] border border-[#333333] text-[#fafafa] text-[14px] shadow-sm hover:border-[#555] cursor-default transition-colors"
                     >
                         <div className="w-[18px] h-[18px] flex items-center justify-center">
-                            <img src={`https://cdn.simpleicons.org/${skill.icon}`} alt={skill.name} className="w-full h-full object-contain" />
+                            {skill.localImage ? (
+                                <img src={skill.localImage} alt={skill.name} className="w-full h-full object-contain" />
+                            ) : (
+                                <img src={`https://cdn.simpleicons.org/${skill.icon}`} alt={skill.name} className="w-full h-full object-contain" />
+                            )}
                         </div>
                         <span className="font-medium tracking-wide">{skill.name}</span>
                     </motion.div>

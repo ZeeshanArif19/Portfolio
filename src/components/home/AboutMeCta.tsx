@@ -1,7 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight, Github, Linkedin, Twitter } from 'lucide-react';
+import { ArrowRight, Github, Linkedin } from 'lucide-react';
 
 export default function AboutMeCta() {
     return (
@@ -36,14 +36,11 @@ export default function AboutMeCta() {
                     </div>
 
                     <div className="flex gap-4 mt-10">
-                        <a href="https://github.com/imdubaid" target="_blank" rel="noreferrer" className="p-3 bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition-colors text-white">
+                        <a href="https://github.com/ZeeshanArif19" target="_blank" rel="noreferrer" className="p-3 bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition-colors text-white">
                             <Github size={18} />
                         </a>
-                        <a href="#" className="p-3 bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition-colors text-white">
+                        <a href="https://www.linkedin.com/in/zeeshan-arif-ahmad-b44608270/" target="_blank" rel="noreferrer" className="p-3 bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition-colors text-white">
                             <Linkedin size={18} />
-                        </a>
-                        <a href="#" className="p-3 bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition-colors text-white">
-                            <Twitter size={18} />
                         </a>
                     </div>
                 </div>

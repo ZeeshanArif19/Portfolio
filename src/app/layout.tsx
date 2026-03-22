@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
-import { Outfit, Playfair_Display } from "next/font/google";
+import { Outfit, Playfair_Display, Geist } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import SmoothScroll from "@/components/layout/SmoothScroll";
+import SplashCursor from "@/components/SplashCursor";
 import "./globals.css";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -27,9 +31,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${outfit.variable} ${playfair.variable} antialiased dark scroll-smooth`}>
+    <html lang="en" className={cn("antialiased", "dark", "scroll-smooth", outfit.variable, playfair.variable, "font-sans", geist.variable)}>
       <body className="flex flex-col relative overflow-x-clip text-white bg-black">
         <SmoothScroll>
+          <SplashCursor />
           {/* Subtle Neon Ambient Lighting */}
           <div className="fixed top-[-5%] right-[-5%] w-[30vw] h-[30vw] max-w-[400px] max-h-[400px] rounded-full bg-[#8b5cf6]/20 blur-[120px] pointer-events-none -z-10" />
           <div className="fixed bottom-[-5%] left-[-5%] w-[30vw] h-[30vw] max-w-[400px] max-h-[400px] rounded-full bg-[#00dfd8]/20 blur-[120px] pointer-events-none -z-10" />

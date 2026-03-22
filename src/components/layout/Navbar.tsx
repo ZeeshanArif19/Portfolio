@@ -23,9 +23,18 @@ export default function Navbar() {
             transition={{ duration: 0.5 }}
             className="fixed top-8 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl flex justify-between items-center"
         >
-            {/* Logo */}
-            <Link href="/" className="flex flex-col items-center justify-center w-10 h-10 rounded-full border border-white/30 hover:scale-105 transition-transform">
-                <span className="font-bold text-lg font-serif tracking-tighter">Z</span>
+            {/* Custom Z 1 Logo */}
+            <Link href="/" className="group relative flex flex-col items-center justify-center w-11 h-11 rounded-full bg-[#111] border border-white/10 hover:border-[#00dfd8]/50 hover:shadow-[0_0_20px_rgba(0,223,216,0.3)] hover:scale-105 transition-all duration-500">
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#00dfd8]/10 to-[#007cf0]/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <svg width="18" height="24" viewBox="0 0 500 680" fill="none" xmlns="http://www.w3.org/2000/svg" className="relative z-10 drop-shadow-[0_0_8px_rgba(0,223,216,0.2)] group-hover:drop-shadow-[0_0_12px_rgba(0,223,216,0.6)] transition-all duration-500">
+                    <defs>
+                        <linearGradient id="zGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stopColor="#00dfd8" />
+                            <stop offset="100%" stopColor="#007cf0" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M 465 35 L 35 645 L 465 645 L 465 35 L 35 35" stroke="url(#zGradient)" strokeWidth="70" strokeLinejoin="miter" strokeMiterlimit="4" strokeLinecap="square" />
+                </svg>
             </Link>
 
             {/* Centered Pill Navigation */}
@@ -36,16 +45,15 @@ export default function Navbar() {
                         return (
                             <li key={link.name} className="relative">
                                 {isActive && (
-                                    <>
-                                        <motion.div
-                                            layoutId="navbar-active-bg"
-                                            className="absolute inset-0 bg-white/10 rounded-full pointer-events-none"
-                                        />
-                                        <motion.div
-                                            layoutId="navbar-active-glow"
-                                            className="absolute -top-[6px] left-1/2 -translate-x-1/2 w-8 h-[3px] bg-white rounded-full shadow-[0_2px_15px_4px_rgba(255,255,255,0.6)] pointer-events-none"
-                                        />
-                                    </>
+                                    <motion.div
+                                        layoutId="navbar-active-item"
+                                        className="absolute inset-0 pointer-events-none"
+                                        transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                                        style={{ borderRadius: 9999 }}
+                                    >
+                                        <div className="absolute inset-0 bg-white/10 rounded-full" />
+                                        <div className="absolute -top-[6px] inset-x-0 mx-auto w-8 h-[3px] bg-white rounded-full shadow-[0_2px_15px_4px_rgba(255,255,255,0.6)]" />
+                                    </motion.div>
                                 )}
                                 <Link
                                     href={link.href}

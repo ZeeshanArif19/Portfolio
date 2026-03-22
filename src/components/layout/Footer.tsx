@@ -1,6 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Github, Linkedin, Twitter, Mail } from 'lucide-react';
+import { ArrowUpRight, Github, Linkedin, Mail } from 'lucide-react';
 
 export default function Footer() {
     return (
@@ -58,14 +58,11 @@ export default function Footer() {
 
                     <div className="flex flex-col gap-4 mt-2">
                         <h4 className="text-[11px] font-bold tracking-[0.2em] text-[#666] uppercase mb-2">Socials</h4>
-                        <a href="https://github.com/zeeshanarif" target="_blank" rel="noreferrer" className="group flex items-center gap-3 text-[#a1a1aa] hover:text-white transition-colors text-[15px] font-medium w-max">
+                        <a href="https://github.com/ZeeshanArif19" target="_blank" rel="noreferrer" className="group flex items-center gap-3 text-[#a1a1aa] hover:text-white transition-colors text-[15px] font-medium w-max">
                             <Github size={18} className="text-[#555] group-hover:text-white transition-colors" /> GitHub
                         </a>
-                        <a href="https://linkedin.com/in/zeeshanarif" target="_blank" rel="noreferrer" className="group flex items-center gap-3 text-[#a1a1aa] hover:text-white transition-colors text-[15px] font-medium w-max">
+                        <a href="https://www.linkedin.com/in/zeeshan-arif-ahmad-b44608270/" target="_blank" rel="noreferrer" className="group flex items-center gap-3 text-[#a1a1aa] hover:text-white transition-colors text-[15px] font-medium w-max">
                             <Linkedin size={18} className="text-[#555] group-hover:text-white transition-colors" /> LinkedIn
-                        </a>
-                        <a href="https://twitter.com/zeeshanarif" target="_blank" rel="noreferrer" className="group flex items-center gap-3 text-[#a1a1aa] hover:text-white transition-colors text-[15px] font-medium w-max">
-                            <Twitter size={18} className="text-[#555] group-hover:text-white transition-colors" /> Twitter
                         </a>
                     </div>
                 </div>

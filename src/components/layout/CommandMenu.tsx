@@ -17,7 +17,7 @@ const resourceItems = [
 
 const socialItems = [
     { name: 'GitHub', sub: 'Check out my repositories', icon: Github, href: 'https://github.com/ZeeshanArif19', external: true },
-    { name: 'LinkedIn', sub: 'Connect with me', icon: Linkedin, href: 'https://linkedin.com/in/zeeshan-arif-19z', external: true }
+    { name: 'LinkedIn', sub: 'Connect with me', icon: Linkedin, href: 'https://www.linkedin.com/in/zeeshan-arif-ahmad-b44608270/', external: true }
 ];
 
 export default function CommandMenu({ isOpen, setIsOpen }: { isOpen: boolean, setIsOpen: (v: boolean) => void }) {
@@ -258,7 +258,7 @@ export default function CommandMenu({ isOpen, setIsOpen }: { isOpen: boolean, se
                                     <a href="https://github.com/ZeeshanArif19" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                                         <Github size={16} />
                                     </a>
-                                    <a href="https://linkedin.com/in/zeeshan-arif-19z" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                                    <a href="https://www.linkedin.com/in/zeeshan-arif-ahmad-b44608270/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                                         <Linkedin size={16} />
                                     </a>
                                 </div>

@@ -15,13 +15,14 @@ const projects = [
         ],
         tech: [
             { name: "Node.js", icon: "nodedotjs" },
-            { name: "Express.js", icon: "express" },
+            { name: "Express.js", icon: "express/white" },
             { name: "PostgreSQL", icon: "postgresql" },
             { name: "React", icon: "react" },
             { name: "Tailwind CSS", icon: "tailwindcss" }
         ],
         image: "/event-image.png",
-        color: "bg-[#8bb4f6]"
+        color: "bg-[#8bb4f6]",
+        repo: "https://github.com/ZeeshanArif19/Event-Ticketing-System-with-ACID-Transactions-and-Concurrency-Handling"
     },
     {
         title: "Memory Mgt. Simulator",
@@ -40,7 +41,8 @@ const projects = [
             { name: "OS Architecture", icon: null }
         ],
         image: "/memory-image.png",
-        color: "bg-[#f5a3a3]"
+        color: "bg-[#f5a3a3]",
+        repo: "https://github.com/ZeeshanArif19/Memory-Management-Simulator"
     },
     {
         title: "Crowd Problem Register",
@@ -54,14 +56,15 @@ const projects = [
         ],
         tech: [
             { name: "MongoDB", icon: "mongodb" },
-            { name: "Express.js", icon: "express" },
+            { name: "Express.js", icon: "express/white" },
             { name: "React", icon: "react" },
             { name: "Node.js", icon: "nodedotjs" },
             { name: "Tailwind CSS", icon: "tailwindcss" },
-            { name: "Socket.io", icon: "socketdotio" }
+            { name: "Socket.io", icon: "socketdotio/white" }
         ],
         image: "/crowd-image.png",
-        color: "bg-[#b1ecc0]"
+        color: "bg-[#b1ecc0]",
+        repo: "https://github.com/Shresth2725/ComplaintRegisterPortal"
     }
 ];
 
@@ -90,8 +93,13 @@ export default function FeaturedProjects() {
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.6 }}
                         key={project.title}
-                        className={`flex flex-col ${idx % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} rounded-[32px] overflow-hidden bg-[#161616] border border-white/5 shadow-2xl relative`}
                     >
+                        <a 
+                            href={project.repo} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className={`flex flex-col ${idx % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} rounded-[32px] overflow-hidden bg-[#161616] border border-white/5 shadow-2xl relative group/card hover:border-white/20 transition-all duration-300 block`}
+                        >
                         {/* Visual Placeholder for Project Image */}
                         <div className={`w-full lg:w-[40%] ${project.color} flex items-center justify-center p-8 lg:p-8 relative min-h-[350px]`}>
                             {/* Authentic Laptop Mockup */}
@@ -154,6 +162,7 @@ export default function FeaturedProjects() {
                                 ))}
                             </div>
                         </div>
+                        </a>
                     </motion.div>
                 ))}
             </div>

@@ -77,17 +77,17 @@ export default function Navbar() {
                     {/* Glowing background */}
                     <span className="absolute inset-0 bg-gradient-to-r from-[#00dfd8] to-[#007cf0] blur-[10px] group-hover:blur-[15px] transition-all duration-300 opacity-60 group-hover:opacity-100" />
                     <span className="absolute inset-0 bg-gradient-to-r from-[#00dfd8] to-[#007cf0] opacity-80" />
-                    
+
                     {/* Button surface */}
                     <span className="relative z-10 font-bold text-white text-[13px] tracking-widest uppercase text-shadow-sm">
                         Resume
                     </span>
-                    
+
                     {/* Glass sheen */}
                     <span className="absolute inset-0 bg-gradient-to-b from-white/20 to-transparent opacity-50 z-20" />
                 </Link>
-                
-                <button 
+
+                <button
                     onClick={() => setIsCmdOpen(true)}
                     className="text-[#a1a1aa] hover:scale-110 transition-transform w-[27px] h-[27px]"
                 >

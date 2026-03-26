@@ -1,5 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function AboutHero() {
     return (
@@ -40,13 +41,19 @@ export default function AboutHero() {
                 className="w-full md:w-[35%] flex justify-center"
             >
                 <div className="w-full max-w-[320px] aspect-[3/4] rounded-[40px] bg-gradient-to-br from-[#111] to-[#050505] border border-white/10 relative overflow-hidden flex items-center justify-center group shadow-2xl">
-                    <div className="absolute inset-0 bg-[#00dfd8]/5 group-hover:bg-[#00dfd8]/10 transition-colors duration-500" />
-                    <span className="text-[#a1a1aa] font-medium text-sm z-10 tracking-widest uppercase">Portrait Placeholder</span>
+                    <Image
+                        src="/images/profile.png"
+                        alt="Zeeshan Arif Ahmad"
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                        sizes="(max-width: 768px) 100vw, 320px"
+                        priority
+                    />
                     
                     {/* Decorative elements */}
-                    <div className="absolute top-8 right-8 w-2 h-2 rounded-full bg-[#00dfd8] animate-pulse" />
-                    <div className="absolute bottom-10 left-10 w-16 h-[1px] bg-white/20" />
-                    <div className="absolute -right-20 -top-20 w-40 h-40 bg-[#00dfd8]/20 blur-[60px] rounded-full" />
+                    <div className="absolute top-8 right-8 w-2 h-2 rounded-full bg-[#00dfd8] animate-pulse z-20" />
+                    <div className="absolute bottom-10 left-10 w-16 h-[1px] bg-white/20 z-20" />
+                    <div className="absolute -right-20 -top-20 w-40 h-40 bg-[#00dfd8]/20 blur-[60px] rounded-full z-10" />
                 </div>
             </motion.div>
         </section>

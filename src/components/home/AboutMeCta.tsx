@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowRight, Github, Linkedin } from 'lucide-react';
+import Image from 'next/image';
 
 export default function AboutMeCta() {
     return (
@@ -47,10 +48,14 @@ export default function AboutMeCta() {
 
                 {/* Right Side: Image Placeholder */}
                 <div className="w-full md:w-1/2 flex justify-center md:justify-end">
-                    <div className="w-full max-w-[420px] aspect-[4/5] bg-[#111111] border border-white/10 rounded-[32px] overflow-hidden relative shadow-2xl flex items-center justify-center">
-                        {/* Image Placeholder simulating the portrait */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#1a1a1a] to-[#2a2a2a]" />
-                        <span className="relative text-white/30 text-xs font-medium uppercase tracking-widest z-10">Portrait Placeholder</span>
+                    <div className="w-full max-w-[420px] aspect-[4/5] bg-[#111111] border border-white/10 rounded-[32px] overflow-hidden relative shadow-2xl flex items-center justify-center group">
+                        <Image
+                            src="/images/profile.png"
+                            alt="Zeeshan Arif Ahmad"
+                            fill
+                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                            sizes="(max-width: 768px) 100vw, 420px"
+                        />
                     </div>
                 </div>
             </motion.div>

@@ -4,6 +4,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import SplashCursor from "@/components/SplashCursor";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
@@ -45,6 +46,7 @@ export default function RootLayout({
           </main>
           <Footer />
         </SmoothScroll>
+        <Analytics />
       </body>
     </html>
   );

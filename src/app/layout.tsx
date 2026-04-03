@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Outfit, Playfair_Display, Geist } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import SmoothScroll from "@/components/layout/SmoothScroll";
@@ -45,6 +46,7 @@ export default function RootLayout({
           </main>
           <Footer />
         </SmoothScroll>
+        <SpeedInsights />
       </body>
     </html>
   );
